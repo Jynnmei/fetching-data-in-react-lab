@@ -11,13 +11,6 @@ function App() {
   const [error, setError] = useState(null);
   const url = "https://swapi.info/api/starships";
 
-  // 1. 开始加载 -> isLoading = true
-  // 2. 清除 error
-  // 3. fetch 数据
-  // 4. 如果失败 -> catch error
-  // 5. 如果成功 -> 解析 json -> 存入 state
-  // 6. finally -> 设 isLoading = false
-
   const getData = async () => {
     setIsLoading(true);
     setError(null);
@@ -43,7 +36,7 @@ function App() {
   };
 
   const handleSearch = (searchTerm) => {
-    setQuery(searchTerm); // 更新 search bar
+    setQuery(searchTerm); 
     if (!searchTerm) {
       setDisplayedStarships(starshipsData);
       return;
