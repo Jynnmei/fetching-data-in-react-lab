@@ -2,17 +2,17 @@ import React from "react";
 
 const StarshipSearch = (props) => {
   const handleChange = (event) => {
-    props.onChange(event.target.value); // 每次打字更新 query
+    props.onChange(event.target.value); 
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.onSearch(props.value); // 点 Search 执行搜索
+    props.onSearch(props.value); 
   };
 
   const handleClear = () => {
-    props.onChange(""); // 清空输入框
-    props.onSearch(""); // 清空搜索结果
+    props.onChange(""); 
+    props.onSearch(""); 
   };
 
   return (
